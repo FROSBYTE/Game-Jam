@@ -17,11 +17,6 @@ public class UI : MonoBehaviour
     {
        SceneManager.LoadScene(1);
     }
-
-    public void Options()
-    {
-
-    }
     public void Credits()
     {
         MainMenu_Canvas.SetActive(false);
