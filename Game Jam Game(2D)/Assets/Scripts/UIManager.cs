@@ -12,8 +12,19 @@ public class UIManager : MonoBehaviour
     public FloatVariable health;
     [SerializeField] float damage;
     [SerializeField] Slider slider;
+    private void OnEnable()
+    {
+        health.value = 100f;
+    }
 
-
+    private void Awake()
+    {
+        if(instance!= null && instance != this)
+        {
+            Destroy(this);
+        }
+        else { instance = this; }
+    }
     private void Start()
     {
         Vector3 temp = new Vector3(gauge.rectTransform.rotation.eulerAngles.x, gauge.rectTransform.rotation.eulerAngles.y, -84f);
@@ -31,10 +42,9 @@ public class UIManager : MonoBehaviour
 
         gauge.rectTransform.rotation = Quaternion.Euler(temp);
     }
-    public void TakeDamage(float damage)
+    public void TakeDamage()
     {
         health.value -= damage;
-        slider.value = health.value;
 
     }
 

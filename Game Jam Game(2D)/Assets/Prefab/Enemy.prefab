@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1e1d29a96f8a17459d64763142469e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1958735206068980136, guid: af9bb60da53b2b24d8c7ba96e68adb73, type: 3}
   moveSpeed: 10
 --- !u!50 &5828667233762104095
 Rigidbody2D:
@@ -133,6 +132,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef3ea8e2da4e8940aec88f06a57b2de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onPlayerCollision:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5828667233762104091}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: TakeDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &5505327173295182657
 BoxCollider2D:
   m_ObjectHideFlags: 0

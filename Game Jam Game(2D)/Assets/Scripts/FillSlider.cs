@@ -34,5 +34,9 @@ public class FillSlider : MonoBehaviour
             fillimage.color = Color.red;
         }
         else { fillimage.color = Color.green; }
+        if (health.value <= 0)
+        {
+            GameManager.instance.onGameEnd?.Invoke();
+        }
     }
 }

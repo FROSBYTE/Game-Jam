@@ -764,6 +764,87 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &660028279
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5828667233762104091, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 28.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828667233762104094, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131472509975065221, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: onPlayerCollision.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131472509975065221, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: onPlayerCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131472509975065221, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: onPlayerCollision.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 933453766}
+    - target: {fileID: 9131472509975065221, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: onPlayerCollision.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 933453766}
+    - target: {fileID: 9131472509975065221, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: onPlayerCollision.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TakeDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 9131472509975065221, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
+      propertyPath: onPlayerCollision.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f35d935c7cf6b9d4da0fc9c79190045b, type: 3}
 --- !u!1 &779615491
 GameObject:
   m_ObjectHideFlags: 0
