@@ -42,12 +42,13 @@ public class Fuel : MonoBehaviour
     public void reduceFuel()
     {
         _fuel -= decreaseFuelValue*Time.deltaTime;
+
         if (_fuel <= -_startingFuel)
         {
             Debug.Log("Fuel Empty");
             GameManager.instance.onGameEnd?.Invoke();
            
         }
-
+        _fuel = Mathf.Clamp(_fuel, -84f, 84f);
     }
 }
