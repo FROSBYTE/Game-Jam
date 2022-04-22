@@ -17,6 +17,10 @@ public class Fuel : MonoBehaviour
     }
     private float _startingFuel;
     public UnityEvent onFuelIncrease;
+    public float StartingFuel
+    {
+        get { return _startingFuel; }
+    }
     private void addListenersToEvents()
     {
 
@@ -57,7 +61,7 @@ public class Fuel : MonoBehaviour
     }
     public void increaseFuel()
     {
-        _fuel += 20f;
+        _fuel += 100f;
 
        
         _fuel = Mathf.Clamp(_fuel, -_startingFuel, _startingFuel);

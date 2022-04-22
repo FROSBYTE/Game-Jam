@@ -18,6 +18,7 @@ public class FuelBuff : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             _fuel.increaseFuel();
+            Destroy(gameObject);
         }
     }
 }

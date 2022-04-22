@@ -39,5 +39,6 @@ public class FillSlider : MonoBehaviour
             Debug.Log("health 0");
             GameManager.instance.onGameEnd?.Invoke();
         }
+        health.value = Mathf.Clamp(health.value,0,100);
     }
 }

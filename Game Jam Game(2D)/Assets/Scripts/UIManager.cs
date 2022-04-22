@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] Slider slider;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] ScoreManager scoreManager;
+   
+
     private void OnEnable()
     {
         health.value = 100f;
@@ -39,6 +41,7 @@ public class UIManager : MonoBehaviour
 
         gaugeValue();
         scoreText.text = scoreManager.Score.ToString();
+        
     }
     private void gaugeValue()
     {
