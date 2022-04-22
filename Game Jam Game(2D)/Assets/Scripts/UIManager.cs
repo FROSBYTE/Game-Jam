@@ -9,6 +9,9 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
     [SerializeField]
     private Fuel fuel;
+    public FloatVariable health;
+    [SerializeField] float damage;
+    [SerializeField] Slider slider;
 
 
     private void Start()
@@ -28,5 +31,11 @@ public class UIManager : MonoBehaviour
 
         gauge.rectTransform.rotation = Quaternion.Euler(temp);
     }
-    
+    public void TakeDamage(float damage)
+    {
+        health.value -= damage;
+        slider.value = health.value;
+
+    }
+
 }
