@@ -36,6 +36,7 @@ public class FillSlider : MonoBehaviour
         else { fillimage.color = Color.green; }
         if (health.value <= 0)
         {
+            Debug.Log("health 0");
             GameManager.instance.onGameEnd?.Invoke();
         }
     }

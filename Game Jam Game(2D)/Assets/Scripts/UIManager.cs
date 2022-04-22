@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
@@ -12,6 +13,8 @@ public class UIManager : MonoBehaviour
     public FloatVariable health;
     [SerializeField] float damage;
     [SerializeField] Slider slider;
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] ScoreManager scoreManager;
     private void OnEnable()
     {
         health.value = 100f;
@@ -33,7 +36,9 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         gaugeValue();
+        scoreText.text = scoreManager.Score.ToString();
     }
     private void gaugeValue()
     {

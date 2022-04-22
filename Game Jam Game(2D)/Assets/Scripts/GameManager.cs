@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
@@ -12,8 +13,20 @@ public class GameManager : MonoBehaviour
     
     private void addListenerToUnityEvents()
     {
-        onGameEnd += () => { _gameStarted = false; };
+        onGameEnd += () => { _gameStarted = false; 
+            endgame(); };
     }
+    private void Start()
+    {
+        addListenerToUnityEvents();
+    }
+
+    private void endgame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
+    }
+
     public bool GameStarted
     {
         get { return _gameStarted; }
