@@ -6,6 +6,8 @@ public class RocketCollision : MonoBehaviour
 {
   
     private spawnObject spawner;
+    [SerializeField]
+    PlayerCollisionWithBoss collisionWithBoss;
 
     private void Start()
     {
@@ -13,10 +15,9 @@ public class RocketCollision : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Enemies"))
+        if (collision.gameObject.CompareTag("Boss"))
         {
-            Debug.Log("Enemy Destroyed");
-            Destroy(collision.gameObject);
+            Debug.Log("Boss Destroyed");
 
             /*onPlayerCollision?.Invoke();*/
         }
@@ -32,5 +33,10 @@ public class RocketCollision : MonoBehaviour
 
             /*onPlayerCollision?.Invoke();*/
         }
+        if (collision.gameObject.CompareTag("Boss"))
+        {
+            collisionWithBoss.BossTakeDamage();
+        }
     }
+ 
 }
