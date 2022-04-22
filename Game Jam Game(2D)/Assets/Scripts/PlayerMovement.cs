@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _rotationSenitivity;
     private bool _hasFuel;
+    [SerializeField]
+    private GameObject _rocketBackCollider;
 
     private void addListenersToEvents()
     {
@@ -41,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     {
         initialiseValues();
        addListenersToEvents();
+        _rocketBackCollider.SetActive(false);
     }
 
     // Update is called once per frame
@@ -59,10 +62,15 @@ public class PlayerMovement : MonoBehaviour
         {
             GameManager.instance.onPlayerMoving?.Invoke();
             _rigidbody.AddForce(transform.up * _speed, ForceMode2D.Impulse);
+            _rocketBackCollider.SetActive(true);
         }
         if (Input.GetMouseButtonDown(0))
         {
             _rigidbody.velocity = Vector2.zero;
+        }
+        if(Input.GetMouseButtonUp(0)) 
+        {
+            _rocketBackCollider.SetActive(false);
         }
 
     }

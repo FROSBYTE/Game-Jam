@@ -335,7 +335,7 @@ GameObject:
   m_Component:
   - component: {fileID: 148543957}
   - component: {fileID: 148543956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -367,11 +367,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.32755852, y: 42.927315}
-      - {x: -75.30654, y: 43.546566}
-      - {x: -73.63304, y: -39.46076}
-      - {x: 67.0367, y: -39.039413}
-      - {x: 64.49715, y: 39.61588}
+    - - {x: -1.1125431, y: 143.62729}
+      - {x: -136.4485, y: 145.73648}
+      - {x: -125.215, y: -149.55357}
+      - {x: 133.24635, y: -142.97319}
+      - {x: 151.06297, y: 141.25525}
 --- !u!4 &148543957
 Transform:
   m_ObjectHideFlags: 0
