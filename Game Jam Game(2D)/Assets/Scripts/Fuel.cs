@@ -53,13 +53,13 @@ public class Fuel : MonoBehaviour
             GameManager.instance.onGameEnd?.Invoke();
            
         }
-        _fuel = Mathf.Clamp(_fuel, -84f, 84f);
+        _fuel = Mathf.Clamp(_fuel, -_startingFuel, _startingFuel);
     }
     public void increaseFuel()
     {
         _fuel += 20f;
 
        
-        _fuel = Mathf.Clamp(_fuel, -84f, 84f);
+        _fuel = Mathf.Clamp(_fuel, -_startingFuel, _startingFuel);
     }
 }
