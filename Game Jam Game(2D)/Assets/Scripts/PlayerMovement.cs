@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _hasFuel;
     [SerializeField]
     private GameObject _rocketBackCollider;
-
+    public AudioSource audioSource;
     private void addListenersToEvents()
     {
         GameManager.instance.onGameStart += startMovement;
@@ -67,6 +67,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             _rigidbody.velocity = Vector2.zero;
+            audioSource.Play();
         }
         if(Input.GetMouseButtonUp(0)) 
         {
