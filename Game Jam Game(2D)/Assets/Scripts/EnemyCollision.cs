@@ -13,15 +13,10 @@ public class EnemyCollision : MonoBehaviour
 
             /*onPlayerCollision?.Invoke();*/
         }
-        if (collision.gameObject.CompareTag("RocketBack"))
-        {
-            Debug.Log("Enemy Destroyed");
-            Destroy(gameObject);
-
-            /*onPlayerCollision?.Invoke();*/
-        }
+        
 
         
     }
+   
 
 }
