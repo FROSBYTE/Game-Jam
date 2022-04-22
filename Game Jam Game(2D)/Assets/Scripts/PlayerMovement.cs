@@ -48,16 +48,15 @@ public class PlayerMovement : MonoBehaviour
     
     private void movement()
     {
-       if(Input.GetKey(KeyCode.Space))
+        if (Input.GetMouseButton(0))
         {
+
             _rigidbody.AddForce(transform.up * _speed, ForceMode2D.Impulse);
         }
-      
-       // _rigidbody.MoveRotation(angle);
-       
-       
-        
-       
+        if (Input.GetMouseButtonDown(0))
+        {
+            _rigidbody.velocity = Vector2.zero;
+        }
     }
     private void applyRotation()
     {
