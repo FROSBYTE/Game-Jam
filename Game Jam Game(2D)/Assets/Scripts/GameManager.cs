@@ -7,6 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Action onGameStart;
     private bool _gameStarted = false;
+    [SerializeField]
+    GameObject enemy;
+    [SerializeField]
+    Transform spawnPos;
+
     public bool GameStarted
     {
         get { return _gameStarted; }
@@ -20,7 +25,7 @@ public class GameManager : MonoBehaviour
     // is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemy());
     }
 
     // Update is called once per frame
@@ -30,6 +35,14 @@ public class GameManager : MonoBehaviour
         {
             onGameStart?.Invoke();
             _gameStarted = true;
+        }
+    }
+    IEnumerator SpawnEnemy()
+    {
+        while (true)
+        {
+            Instantiate(enemy, spawnPos.position, Quaternion.identity);
+            yield return new WaitForSeconds(1f);
         }
     }
 }
