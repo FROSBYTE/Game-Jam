@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.instance.GameStarted==true && _hasFuel==true)
+        if(GameManager.instance.GameStarted==true)
         {
             movement();
             applyRotation();

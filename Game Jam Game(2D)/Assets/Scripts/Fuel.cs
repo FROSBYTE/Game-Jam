@@ -30,6 +30,8 @@ public class Fuel : MonoBehaviour
     {
         addListenersToEvents();
         _startingFuel = _fuel;
+        Debug.Log(_startingFuel);
+
     }
 
     // Update is called once per frame
@@ -42,7 +44,9 @@ public class Fuel : MonoBehaviour
         _fuel -= decreaseFuelValue*Time.deltaTime;
         if (_fuel <= -_startingFuel)
         {
-            GameManager.instance.onFuelEmpty?.Invoke();
+            Debug.Log("Fuel Empty");
+            GameManager.instance.onGameEnd?.Invoke();
+           
         }
 
     }

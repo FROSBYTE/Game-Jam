@@ -6,14 +6,17 @@ using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Action onGameStart,onFuelEmpty;
+    public Action onGameStart,onGameEnd,onFuelEmpty;
     public UnityEvent onPlayerMoving;
     private bool _gameStarted = false;
     [SerializeField]
     GameObject enemy;
     [SerializeField]
     Transform spawnPos;
-
+    private void addListenerToUnityEvents()
+    {
+        onGameEnd += () => { _gameStarted = false; };
+    }
     public bool GameStarted
     {
         get { return _gameStarted; }
