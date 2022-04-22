@@ -945,6 +945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0.5
   _rotationSenitivity: 1
+  _rocketBackCollider: {fileID: 89733964}
 --- !u!1 &859659067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fuel: 84
-  decreaseFuelValue: 5
+  decreaseFuelValue: 30
 --- !u!1 &1246530147
 GameObject:
   m_ObjectHideFlags: 0
