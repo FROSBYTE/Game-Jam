@@ -5,15 +5,22 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
     private Rigidbody2D _rigidbody;
     [SerializeField]
     private float _speed;
     private float _direction;
     [SerializeField]
     private float _rotationSenitivity;
+    private bool _hasFuel;
+
     private void addListenersToEvents()
     {
         GameManager.instance.onGameStart += startMovement;
+        GameManager.instance.onPlayerMoving.AddListener(delegate
+        {
+            
+        });
          
     }
     private void startMovement()
@@ -39,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameManager.instance.GameStarted==true)
+        if(GameManager.instance.GameStarted==true && _hasFuel==true)
         {
             movement();
             applyRotation();
@@ -50,13 +57,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-
+            GameManager.instance.onPlayerMoving?.Invoke();
             _rigidbody.AddForce(transform.up * _speed, ForceMode2D.Impulse);
         }
         if (Input.GetMouseButtonDown(0))
         {
             _rigidbody.velocity = Vector2.zero;
         }
+
     }
     private void applyRotation()
     {

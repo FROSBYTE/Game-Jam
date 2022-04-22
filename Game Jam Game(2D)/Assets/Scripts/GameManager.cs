@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.Events;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Action onGameStart;
+    public Action onGameStart,onFuelEmpty;
+    public UnityEvent onPlayerMoving;
     private bool _gameStarted = false;
     [SerializeField]
     GameObject enemy;
