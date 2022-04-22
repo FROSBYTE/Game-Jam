@@ -9,10 +9,7 @@ public class GameManager : MonoBehaviour
     public Action onGameStart,onGameEnd,onFuelEmpty;
     public UnityEvent onPlayerMoving;
     private bool _gameStarted = false;
-    [SerializeField]
-    GameObject enemy;
-    [SerializeField]
-    Transform spawnPos;
+    
     private void addListenerToUnityEvents()
     {
         onGameEnd += () => { _gameStarted = false; };
@@ -28,10 +25,7 @@ public class GameManager : MonoBehaviour
     }
     // Start
     // is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(SpawnEnemy());
-    }
+   
 
     // Update is called once per frame
     void Update()
@@ -42,13 +36,6 @@ public class GameManager : MonoBehaviour
             _gameStarted = true;
         }
     }
-    IEnumerator SpawnEnemy()
-    {
-        while (true)
-        {
-            Instantiate(enemy, spawnPos.position, Quaternion.identity);
-            yield return new WaitForSeconds(1f);
-        }
-    }
+    
 
 }
