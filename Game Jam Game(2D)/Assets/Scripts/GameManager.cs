@@ -8,13 +8,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Action onGameStart,onGameEnd,onFuelEmpty;
-    public UnityEvent onPlayerMoving;
+    public UnityEvent onPlayerMoving,onGameWin;
     private bool _gameStarted = false;
     
     private void addListenerToUnityEvents()
     {
         onGameEnd += () => { _gameStarted = false; 
             endgame(); };
+        onGameWin.AddListener(delegate
+        {
+            Win();
+        });
     }
     private void Start()
     {
@@ -48,6 +52,10 @@ public class GameManager : MonoBehaviour
             onGameStart?.Invoke();
             _gameStarted = true;
         }
+    }
+    private void Win()
+    {
+        SceneManager.LoadScene(3);
     }
     
 
