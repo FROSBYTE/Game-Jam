@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealthSlider : MonoBehaviour
 {
@@ -42,5 +43,9 @@ public class EnemyHealthSlider : MonoBehaviour
         //    Debug.Log("GameWin");
         //    GameManager.instance.onGameEnd?.Invoke();
         //}
+        if(bossHealth.value <= 0)
+        {
+            SceneManager.LoadScene("EndScene");
+        }
     }
 }

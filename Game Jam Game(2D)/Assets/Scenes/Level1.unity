@@ -7550,7 +7550,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!4 &837147214
 Transform:
   m_ObjectHideFlags: 0
@@ -11865,6 +11865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPlayerMoving:
+    m_PersistentCalls:
+      m_Calls: []
+  onGameWin:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &1394681773
